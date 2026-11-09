@@ -1,0 +1,17 @@
+import * as G from '../js/guna.js';
+import * as R from '../js/rashifal.js';
+import * as A from '../js/astro.js';
+const same = {rashi:0,deg:5,nak:0};
+const r = G.ashtakoota(same, same);
+console.log('same nakshatra total (expect 28):', r.total, r.kootas.map(k=>k.key+':'+k.score).join(' '));
+const r2 = G.ashtakoota({rashi:3,deg:10,nak:7},{rashi:7,deg:20,nak:16});
+console.log('Kark/Pushya x Vrishchik/Anuradha:', r2.total, r2.kootas.map(k=>k.key+':'+k.score).join(' '));
+console.log('tropical Mar5,Mar21,Dec25,Jan10,Jun10 =', [A.tropicalSunSign(3,5),A.tropicalSunSign(3,21),A.tropicalSunSign(12,25),A.tropicalSunSign(1,10),A.tropicalSunSign(6,10)].join(','), '(expect 11,0,9,9,2)');
+const d = R.daily(3);
+console.log('daily Kark:', d.stars, d.level, d.moonHouse, JSON.stringify(d.sade), d.text[0]);
+console.log('cats', Object.entries(d.cats).map(([k,v])=>k+':'+v.stars).join(' '));
+const w = R.weekly(3);
+console.log('weekly stars per day', w.days.map(x=>x.stars).join(','), 'overall', w.stars);
+const m = R.monthly(3);
+console.log('monthly', m.stars, m.slow.map(s=>s.id+':'+s.house+(s.good?'+':'-')).join(' '));
+const t0=performance.now(); for(let i=0;i<12;i++) R.monthly(i); console.log('12 monthly in ms', Math.round(performance.now()-t0));

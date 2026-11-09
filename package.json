@@ -1,0 +1,7 @@
+{
+  "name": "starpath",
+  "version": "1.0.0",
+  "description": "StarPath - Vedic astrology: rashifal, kundli, rashi finder, guna milan",
+  "type": "module",
+  "private": true
+}

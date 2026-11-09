@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>StarPath · राशिफल, कुंडली, गुण मिलान</title>
+  <meta name="description" content="StarPath: free Vedic astrology. Daily rashifal, kundli, rashi finder and Guna Milan in Hindi and English, from real planetary positions.">
+  <meta name="theme-color" content="#05060f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2305060f'/%3E%3Ctext x='50' y='68' font-size='62' text-anchor='middle' fill='%23ffd27a'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Sans+Devanagari:wght@400;500;700&family=Noto+Sans+Symbols&family=Poppins:wght@300;400;500;600&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.min.js", "three/addons/": "./vendor/" } }
+  </script>
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div id="cur-ring" aria-hidden="true"></div><div id="cur-dot" aria-hidden="true"></div>
+
+  <header id="nav" class="nav">
+    <a class="logo" href="#/" aria-label="StarPath"><span class="logo-star">✦</span><span>Star<b>Path</b></span></a>
+    <nav id="nav-links" class="nav-links"></nav>
+    <button id="lang-btn" class="lang" aria-label="Language"></button>
+    <button id="burger" class="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-row"><a class="logo" href="#/"><span class="logo-star">✦</span><span>Star<b>Path</b></span></a><nav id="foot-links"></nav></div>
+      <p id="foot-text" class="fine"></p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
